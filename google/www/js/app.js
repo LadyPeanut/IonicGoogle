@@ -63,8 +63,13 @@ angular.module('starter', ['ionic', 'services'])
     });
 
     window.plugins.googleplus.login(
-      {},
+      {
+        'scopes': 'profile email',
+        'offline': true,
+        'webClientId': '479391818404-9gi91a3o21tmrslr8vl3oqkkbk33os59.apps.googleusercontent.com'
+      },
       function (user_data) {
+        alert(JSON.stringify(user_data)); // do something useful instead of alerting
         // For the purpose of this example I will store user data on local storage
         UserService.setUser({
           userID: user_data.userId,
@@ -75,10 +80,20 @@ angular.module('starter', ['ionic', 'services'])
           idToken: user_data.idToken
         });
 
+        $scope.user = {
+          userID: user_data.userId,
+          name: user_data.displayName,
+          email: user_data.email,
+          picture: user_data.imageUrl,
+          accessToken: user_data.accessToken,
+          idToken: user_data.idToken
+        };
+
         $ionicLoading.hide();
         $state.go('app.home');
       },
       function (msg) {
+        alert(msg);
         $ionicLoading.hide();
       }
     );
@@ -120,3 +135,5 @@ angular.module('starter', ['ionic', 'services'])
 		});
 	};
 });
+
+$scope.user = {};
