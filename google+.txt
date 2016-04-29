@@ -1,0 +1,8 @@
+Tutorial seguido: https://github.com/EddyVerbruggen/cordova-plugin-googleplus y https://ionicthemes.com/tutorials/about/google-plus-login-with-ionic-framework
+
+Comando para conseguir algo:
+keytool -list -v -keystore %USERPROFILE%\.android\debug.keystore -alias androiddebugkey -storepass android -keypass android
+
+http://blog.ionic.io/oauth-ionic-ngcordova/
+
+https://www.youtube.com/watch?v=867eYcLYUI8
