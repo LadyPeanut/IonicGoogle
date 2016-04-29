@@ -6,3 +6,5 @@ keytool -list -v -keystore %USERPROFILE%\.android\debug.keystore -alias androidd
 http://blog.ionic.io/oauth-ionic-ngcordova/
 
 https://www.youtube.com/watch?v=867eYcLYUI8
+
+https://www.thepolyglotdeveloper.com/2014/07/using-oauth-2-0-service-ionicframework/
