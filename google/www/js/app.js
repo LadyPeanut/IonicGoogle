@@ -63,11 +63,7 @@ angular.module('starter', ['ionic', 'services'])
     });
 
     window.plugins.googleplus.login(
-      {
-        'scopes': 'profile email',
-        'offline': true,
-        'webClientId': '479391818404-9gi91a3o21tmrslr8vl3oqkkbk33os59.apps.googleusercontent.com'
-      },
+      {},
       function (user_data) {
         alert(JSON.stringify(user_data)); // do something useful instead of alerting
         // For the purpose of this example I will store user data on local storage
