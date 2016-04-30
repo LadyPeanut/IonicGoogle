@@ -17,7 +17,26 @@ Crear una key:
 1. Crear un keystore
 2. Generar la clave: AndroidDebugKey tiene que ser el alias porque si no llora.
 
-
 Bibliografia:
   http://alvinalexander.com/java/java-keytool-keystore-certificates
   https://www.digitalocean.com/community/tutorials/java-keytool-essentials-working-with-java-keystores
+
+|------------------------------------------------------------------------------|
+Tutorial para crear una aplicacion que se conecte a Google+
+
+1. Tienes que generar en el ordenador en que vayas a generar el APK, ya sea de
+prueba o release, las keys para que se conecte totalmente a Google+ y te
+devuelva algo más que el email.
+
+2. Bajarte el plugin de Google+ via npm (si te lo bajas de Github me parece que
+no funca): cordova plugin add cordova-plugin-googleplus
+
+3. Hacer cordova prepare
+
+4. Hacer ionic platform add android y ionic build android (ionic build
+--release android si quieres que sea release).
+
+5. Si no funcioan mira que no sea por un @drawable/icon. Eso es que al agregar
+la plataforma android, Ionic se deja ese archivo. Ponle cualquier icono de
+nombre icon.png aqui:
+  ./platforms/android/res/drawable
